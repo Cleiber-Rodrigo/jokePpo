@@ -59,18 +59,19 @@ class _JogoState extends State<Jogo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( //Esqueleto do App
-      appBar: AppBar( //Barra superior
+    return Scaffold( 
+      appBar: AppBar( 
         backgroundColor: Colors.blue,
         title: Text(
           "JokenPo",
         ),
       ),
-      body: Center( //Centralizando
+      body: Center( 
         child: Container(
-          child: Column( //Colocar Widgets um debaixo do outro
+          child: Column(
             children: [
-              Padding( //Distanciamento interno do container e temos tbm o margin que é o externo
+              //Distanciamento interno do container e temos tbm o margin que é o externo
+              Padding( 
                   padding: EdgeInsets.only(top: 20, bottom: 20),
                 child: Text(
                   "Escolha do App",
@@ -81,7 +82,8 @@ class _JogoState extends State<Jogo> {
                   ),
                 ),
                 ),
-              Image(image: this._imagemApp, height: 100), //Inserindo imagem
+              //Inserindo imagem
+              Image(image: this._imagemApp, height: 100), 
               Padding(
                   padding: EdgeInsets.only(top: 30, bottom: 30),
                 child: Text(
@@ -93,11 +95,14 @@ class _JogoState extends State<Jogo> {
                 ),
               ),
               ),
-              Row( //Widgets um ao lado do outro
+              //Widgets um ao lado do outro
+              Row( 
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GestureDetector( //usamos GestureDetector para capturar dados ao usuário clicar na imagem por exemplo
-                    onTap: () => this._opcaoSelecionada("pedra"), //onTap é ao dar um clique rápido. Temos que usar () => que é uma função anônima, pois não posso passar um método direto no onTap
+                   //usamos GestureDetector para capturar dados ao usuário clicar na imagem por exemplo
+                  GestureDetector(
+                    //onTap é ao dar um clique rápido. Temos que usar uma função anônima, pois não posso passar um método direto no onTap
+                    onTap: () => this._opcaoSelecionada("pedra"), 
                     child: Image.asset("imagens/pedra.png", height: 100),
                   ),
                   GestureDetector(
